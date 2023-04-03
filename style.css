@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 10px;
+    background-color: rgb(55, 55, 55);
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-container {
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    width: 20vw;
+    border: 3px solid;
+    border-radius: 20px;
+    background-image: url(./img/iPhone-12-dark-black-wallpaper.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.notch {
+    display: flex;
+    justify-content: flex-end;
+    height: 3rem;
+    width: 12rem;
+    border-radius: 0px 0px 10px 10px;
+    background-color: black;
+}
+
+.camera {
+    margin-right: 1.7rem;
+    background-color: rgb(61, 13, 13);
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 40px;
+}
