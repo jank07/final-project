@@ -12,29 +12,131 @@ html, body {
 }
 
 .wrapper {
-    height: 100vh;
+    margin: auto;
+    height: 60rem;
+    width: 30rem;
+    border: 10px solid;
+    border-radius: 40px;
+    position: relative;
+    box-shadow: 0px 0px 15px;
+}
+
+.screen {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-image: url(./img/wallpaper.jpeg);
+    background-size: cover;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+    justify-content: space-around;
+}
+
+.icons1 {
+    margin-top: 5rem;
+}
+
+.icons a {
+    list-style-type: none;
+    z-index: 1;
+    background-color: white;
+    color: rgb(50, 48, 48);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px;
+    cursor: pointer;
+    /* transform: transform 1s ease-in-out; */
+    transition: 0.5s;
+}
+
+.app:nth-child(1) {
+    background-image: url(./img/netflix-logo.png);
+    background-size: cover;
+}
+
+.app:nth-child(2) {
+    background-image: url(./img/calculator-logo.png);
+    background-size: cover;
+}
+
+.icons a:hover {
+    transform: scale(1.1);
+}
+
+/* Styling calculator */
+
+.calculatorScreen {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    border-radius: 30px;
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
-.phone-container {
+.calculatorDisplay {
     display: flex;
-    justify-content: center;
-    height: 70%;
-    width: 20vw;
-    border: 3px solid;
-    border-radius: 20px;
-    background-image: url(./img/iPhone-12-dark-black-wallpaper.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 2rem 1.5rem;
+    font-size: 6rem;
+    width: 100%;
+    height: 40%;
+    text-align: right;
 }
 
-.notch {
+.calculatorScreen button {
+    background: transparent;
+    font-size: 3rem;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(35, 35, 35);
+    color: white;
+}
+
+.calculatorScreen .panel {
+    width: 100%;
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.calculatorScreen .clear, .calculatorScreen .operator, .calculatorScreen .equals {
+    background-color: orange;
+    font-size: 2.5rem;
+}
+
+.calculatorScreen .zero {
+    grid-row: 5/6;
+    grid-column: -5/-3;
+    border-radius: 35px;
+    text-align: left;
+    padding-left: 2.3rem;
+}
+
+.calculatorScreen .gray {
+    background-color: rgb(152, 152, 152);
+    color:rgb(0, 0, 0);
+}
+/* .notch {
     display: flex;
     justify-content: flex-end;
     height: 3rem;
-    width: 12rem;
+    width: 13rem;
     border-radius: 0px 0px 10px 10px;
     background-color: black;
 }
@@ -45,4 +147,4 @@ html, body {
     width: 1.7rem;
     height: 1.7rem;
     border-radius: 40px;
-}
+} */
