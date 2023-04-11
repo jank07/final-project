@@ -132,6 +132,10 @@ html, body {
     background-color: rgb(152, 152, 152);
     color:rgb(0, 0, 0);
 }
+
+.calculatorScreen .divisionSign {
+    font-size: 3.5rem;
+}
 /* .notch {
     display: flex;
     justify-content: flex-end;
