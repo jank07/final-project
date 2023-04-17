@@ -67,11 +67,29 @@ html, body {
     background-size: cover;
 }
 
-.icons a:hover {
-    transform: scale(1.1);
+.app:nth-child(3) {
+    background-image: url(./img/telephone-logo.png);
+    background-size: cover;
 }
 
+.app:nth-child(4) {
+    background-image: url(./img/contacts-logo.png);
+    background-size: cover;
+}
+
+.icons a:hover {
+    transform: scale(1.05);
+    filter: gray;
+    filter: grayscale(0.4);
+    transition: all .1s ease-in-out;
+}
+
+/*  */
+/*  */
 /* Styling calculator */
+/*  */
+/*  */
+
 
 .calculatorScreen {
     font-family: Arial, Helvetica, sans-serif;
@@ -120,6 +138,11 @@ html, body {
     font-size: 2.5rem;
 }
 
+.calculatorScreen .active {
+    background-color: white;
+    color: orange;
+}
+
 .calculatorScreen .zero {
     grid-row: 5/6;
     grid-column: -5/-3;
@@ -136,6 +159,48 @@ html, body {
 .calculatorScreen .divisionSign {
     font-size: 3.5rem;
 }
+
+.calculatorScreen .currentNumber {
+    overflow: hidden;
+}
+
+
+/*  */
+/*  */
+/* Styling netflix */
+/*  */
+/*  */
+
+
+.netflixScreen {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    border-radius: 30px;
+    background-color: rgb(0, 0, 0);
+    color: red;
+}
+
+.loader {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    border: 1rem solid #000000;
+    border-top: 1rem solid #ff0000; 
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    animation: spin 1s infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
 /* .notch {
     display: flex;
     justify-content: flex-end;
