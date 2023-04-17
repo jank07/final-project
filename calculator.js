@@ -16,9 +16,10 @@ let result = '';
 
 
 // currentNumberReset allows me to change the currentNumber on the screen after clicking operator
-
 let currentNumberReset = 0;
 
+
+// checkIfActive allows me to make only one button active
 function checkIfActive() {
     operatorButtons.forEach((button) => {
         if(button.classList.contains('active')){
@@ -42,6 +43,10 @@ function operate() {
         return currentNumber.innerHTML = currentNumber.innerHTML * -1;
     }
 
+    if(this.textContent === '%') {
+        return currentNumber.innerHTML = currentNumber.innerHTML / 100;
+    }
+
     if(mathSign !== '' && currentNumber !== '') {
         showResult();
     }
@@ -52,6 +57,10 @@ function operate() {
 
 function displayNumbers() {
     checkIfActive();
+    if(result !== '' && mathSign === '') {
+        result = '';
+        return currentNumber.innerHTML = this.textContent;
+    }
     if(this.textContent === '.' && currentNumber.innerHTML.includes('.')) return;
     if(this.textContent === '.' && currentNumber.innerHTML === '0') return currentNumber.innerHTML += '.';
     if(currentNumber.innerHTML === '0') {
@@ -62,18 +71,23 @@ function displayNumbers() {
         currentNumber.innerHTML = '';
         currentNumberReset = 0;
     }
+    // font size changing depending on the currentNumber number of characters
+    if(currentNumber.innerHTML.length > 5 ) {
+        currentNumber.style.fontSize = '4rem';
+    }
+    if(currentNumber.innerHTML.length > 10 ) {
+        currentNumber.style.fontSize = '3rem';
+    }
+    if(currentNumber.innerHTML.length > 15 ) {
+        currentNumber.style.fontSize = '2rem';
+    }
     currentNumber.innerHTML += this.textContent;
 }
 
 function showResult() {
-    // popracuj nad rowna sie i klasa active BUG!!!
-    // checkIfActive();
     if(previousNumber === '' || currentNumber.innerHTML === '') {
         return;
     }
-    // if(previousNumber === 0 || mathSign === '÷') {
-    //     return currentNumber.innerHTML = '0';
-    // }
 
     let a = Number(currentNumber.innerHTML);
     let b = Number(previousNumber);
@@ -113,5 +127,7 @@ operatorButtons.forEach((button) => button.addEventListener('click', operate));
 numberButtons.forEach((button) => button.addEventListener('click', displayNumbers));
 
 equalButton.addEventListener('click', showResult);
+
+equalButton.addEventListener('click', checkIfActive);
 
 clearButton.addEventListener('click', clearScreen);

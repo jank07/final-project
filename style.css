@@ -32,6 +32,23 @@ html, body {
     background-size: cover;
 }
 
+/* .notch {
+    display: flex;
+    justify-content: flex-end;
+    height: 3rem;
+    width: 13rem;
+    border-radius: 0px 0px 10px 10px;
+    background-color: black;
+}
+
+.camera {
+    margin-right: 1.7rem;
+    background-color: rgb(61, 13, 13);
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 40px;
+} */
+
 .icons {
     display: flex;
     flex-wrap: wrap;
@@ -133,7 +150,12 @@ html, body {
     gap: 1rem;
 }
 
-.calculatorScreen .clear, .calculatorScreen .operator, .calculatorScreen .equals {
+.calculatorScreen .operator {
+    font-size: 2.8rem;
+    background-color: orange;
+}
+
+.calculatorScreen .clear, .calculatorScreen .gray, .calculatorScreen .equals {
     background-color: orange;
     font-size: 2.5rem;
 }
@@ -141,6 +163,7 @@ html, body {
 .calculatorScreen .active {
     background-color: white;
     color: orange;
+    transition: all 0.4s ease-in-out;
 }
 
 .calculatorScreen .zero {
@@ -186,10 +209,10 @@ html, body {
 }
 
 .loader {
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-bottom: 2rem;
-    border: 1rem solid #000000;
-    border-top: 1rem solid #ff0000; 
+    border: 0.4rem solid #000000;
+    border-top: 0.4rem solid #ff0000; 
     border-radius: 50%;
     width: 5rem;
     height: 5rem;
@@ -200,20 +223,3 @@ html, body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
-
-/* .notch {
-    display: flex;
-    justify-content: flex-end;
-    height: 3rem;
-    width: 13rem;
-    border-radius: 0px 0px 10px 10px;
-    background-color: black;
-}
-
-.camera {
-    margin-right: 1.7rem;
-    background-color: rgb(61, 13, 13);
-    width: 1.7rem;
-    height: 1.7rem;
-    border-radius: 40px;
-} */
