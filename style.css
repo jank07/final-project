@@ -381,6 +381,11 @@ svg {
 .telephone-screen .latest-calls, .numbers {
     display: flex;
 }
+
+.telephone-screen .latest-calls, .numbers {
+    fill: blue;
+}
+
 .telephone-screen a {
     display: flex;
     flex-direction: column;
@@ -390,6 +395,7 @@ svg {
 
 .telephone-screen a:hover {
     color: rgb(67, 109, 218);
+    fill:rgb(67, 109, 218)
 }
 
 .telephone-screen a > p {
