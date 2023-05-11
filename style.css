@@ -363,6 +363,42 @@ svg {
     height: 40%;
 }
 
+.telephone-screen .bottom-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.telephone-screen .bottom-bar-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    width: 3rem;
+    align-items: center;
+    gap: 5rem;
+}
+
+.telephone-screen .latest-calls, .numbers {
+    display: flex;
+}
+.telephone-screen a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: gray;
+}
+
+.telephone-screen a:hover {
+    color: rgb(67, 109, 218);
+}
+
+.telephone-screen a > p {
+    color: gray;
+}
+.telephone-screen svg:hover {
+    fill: rgb(67, 109, 218);
+}
+
 /* button for returning to home screen */
 
 .back-button button {
@@ -375,4 +411,3 @@ svg {
     border-radius: 1rem;
     background-color: white;
 }
-
