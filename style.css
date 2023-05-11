@@ -393,7 +393,7 @@ svg {
     color: gray;
 }
 
-.telephone-screen a:hover {
+.telephone-screen a:hover svg {
     color: rgb(67, 109, 218);
     fill:rgb(67, 109, 218)
 }
@@ -401,8 +401,8 @@ svg {
 .telephone-screen a > p {
     color: gray;
 }
-.telephone-screen svg:hover {
-    fill: rgb(67, 109, 218);
+.telephone-screen a:hover {
+    color: rgb(67, 109, 218);
 }
 
 /* button for returning to home screen */
