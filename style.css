@@ -502,7 +502,7 @@ svg {
     color: white;
 }
 
-.contacts-screen .top-side-wrapper {
+.contacts-screen .top-side-wrapper, .top-side-create {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -512,10 +512,20 @@ svg {
     position: absolute;
     top: 3rem;
     right: 0;
+    font-size: 1.5rem;
+}
+
+.contacts-screen .top-side-wrapper.disabled, .top-side-create.disabled {
+    display: none;
 }
 
 .contacts-screen .svg-plus {
     fill:rgb(21, 76, 215);
+    cursor: pointer;
+}
+
+.contacts-screen .svg-exit {
+    cursor: pointer;
 }
 
 /* button for returning to home screen */

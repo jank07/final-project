@@ -45,23 +45,11 @@ renderingListOfCalls();
 
 const data = []
 
-telephoneSvg.addEventListener('click', () => {
-    let localStorageData = JSON.parse(localStorage.getItem("data"));
-    if(currentNumber.textContent) {
-        if(data.length == 0 && localStorageData != null) {
-            data.unshift({phonenumber: currentNumber.textContent, time: readingTime()}, ...localStorageData);
-            // localStorageData.unshift({phonenumber: currentNumber.textContent, time: readingTime()});
-        } else {
-            data.unshift({phonenumber: currentNumber.textContent, time: readingTime()});
-        }
-    }
-    localStorage.setItem("data", JSON.stringify(data));
-
+function renderingListOfCallsOnClick() {
     const div = document.createElement("div");
     const h3 = document.createElement("h3");
     const span = document.createElement("span");
     const phoneNumber = document.createTextNode(currentNumber.textContent);
-    console.log(phoneNumber)
     const callTime = document.createTextNode(readingTime());
 
     h3.appendChild(phoneNumber);
@@ -72,6 +60,20 @@ telephoneSvg.addEventListener('click', () => {
     listOfCalls.prepend(div);
 
     currentNumber.innerHTML = '';
+}
+
+telephoneSvg.addEventListener('click', () => {
+    let localStorageData = JSON.parse(localStorage.getItem("data"));
+    if(currentNumber.textContent != '') {
+        if(data.length == 0 && localStorageData != null) {
+            data.unshift({phonenumber: currentNumber.textContent, time: readingTime()}, ...localStorageData);
+            renderingListOfCallsOnClick();
+        } else {
+            data.unshift({phonenumber: currentNumber.textContent, time: readingTime()});
+            renderingListOfCallsOnClick();
+        }
+    }
+    localStorage.setItem("data", JSON.stringify(data));
 })
 
 
