@@ -10,6 +10,9 @@
 html, body {
     font-size: 10px;
     background-color: rgb(55, 55, 55);
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 h1 {
@@ -144,6 +147,11 @@ svg {
     margin-top: 5rem;
 }
 
+.icons2 {
+    justify-content: flex-start;
+    margin-left: 1rem;
+}
+
 .icons a {
     list-style-type: none;
     z-index: 1;
@@ -177,11 +185,16 @@ svg {
     background-size: cover;
 }
 
+.app-row2:nth-child(1) {
+    background-image: url(./img/gallery.jpg);
+    background-size: cover;
+}
+
 .icons a:hover {
     transform: scale(1.05);
-    filter: gray;
-    filter: grayscale(0.4);
-    transition: all .1s ease-in-out;
+    filter: rgb(12, 12, 12);
+    filter: grayscale(0.7);
+    transition: all .2s ease-in-out;
 }
 
 /*  */
@@ -571,10 +584,9 @@ svg {
     margin-top: 10rem;
     padding-left: 1.5rem;
     display: flex;
-    justify-content: center;
     gap: 2rem;
     font-size: 1.3rem;
-    overflow:scroll;
+    overflow-y:scroll;
     
 }
 
@@ -591,6 +603,28 @@ svg {
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+
+.gallery-screen {
+    background-color: black;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.gallery-screen .gallery-grid {
+    padding-top: 5rem;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.gallery-screen img {
+    height: 8rem;
+
+}
+
+.gallery-screen h1 {
+    padding-top: 5rem;
 }
 
 /* button for returning to home screen */
